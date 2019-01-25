@@ -11,8 +11,8 @@ public class GetItem : MonoBehaviour
 
     private void Start()
     {
-        mat1 = GetComponent<Material>();
-    }
+        this.GetComponent<Renderer>().material = mat1;
+    } 
 
 
     // Update is called once per frame
@@ -20,11 +20,15 @@ public class GetItem : MonoBehaviour
     {
 
         if (itemObtained)
-            mat1 = mat2;
-            
-
+            this.GetComponent<Renderer>().material = mat2;
+        else
+        {
+            this.GetComponent<Renderer>().material = mat1;
+        }
     }
 
     
+
+
 
 }
