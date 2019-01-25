@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LavaMaterial
-  m_Shader: {fileID: 4800000, guid: 827ac62c2f50e4df7ba8a9bbe1e4d7f5, type: 3}
+  m_Name: Water
+  m_Shader: {fileID: 4800000, guid: efe71e0219f3045e797415470e976c68, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,5 +20,5 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_2F069AA0: 0.05
+    - Vector1_2F069AA0: 0.15
     m_Colors: []

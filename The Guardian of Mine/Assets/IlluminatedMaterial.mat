@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IlluminatedBorder
-  m_Shader: {fileID: 4800000, guid: f760201b8c408497f88d11c043a5e21d, type: 3}
+  m_Name: IlluminatedMaterial
+  m_Shader: {fileID: 4800000, guid: c0650ec3a247b414eb21b86bdecdb329, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,4 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - Vector2_BA54AF5F: {r: 0.85, g: 0.85, b: 0, a: 0}
+    - _ColorSuperficial: {r: 0, g: 0.990566, b: 0.9703376, a: 0}
+    - _ColorTodo: {r: 0.754717, g: 0, b: 0, a: 0}
