@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ApparitionShader
-  m_Shader: {fileID: 4800000, guid: f6d847412fea74ffaa707869cef8744c, type: 3}
+  m_Name: TrailRendererMaterial
+  m_Shader: {fileID: 4800000, guid: 44c5d993f84edfe4ba8cb12957d2224d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,4 +20,5 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats: []
-    m_Colors: []
+    m_Colors:
+    - Color_66079C2B: {r: 0.9559395, g: 0.9622642, b: 0.07716271, a: 1}
