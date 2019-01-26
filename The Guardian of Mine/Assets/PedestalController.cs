@@ -56,6 +56,12 @@ public class PedestalController : MonoBehaviour
             {
                 dis = 0.5f;
                 ReturnControl();
+                giveMeBook = false;
+                float[] values = new float[2];
+                values[0] = 1f;
+                values[1] = 1f;
+                illuminationBorder.SetFloatArray("_Thickness", values);
+                book.GetComponent<MeshRenderer>().material = illuminationBorder;
             }
 
             dissolution.SetFloat("_dissolve", dis);
@@ -68,6 +74,10 @@ public class PedestalController : MonoBehaviour
                 dissolve_obj = true;
                 DissolveObj();
             }
+            else if (inTrigger && Input.GetMouseButtonDown(1) && book.activeInHierarchy)
+            {
+                book.SetActive(false);
+            }
         }
         
     }
@@ -76,6 +86,15 @@ public class PedestalController : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
+            if (book.activeInHierarchy)
+            {
+                float[] values = new float[2];
+                values[0] = 0.85f;
+                values[1] = 0.85f;
+                illuminationBorder.SetFloatArray("_Thickness", values);
+            }
+
+
             illuminated.SetFloat("_width", 0.1f);
             inTrigger = true;
         }   
@@ -85,6 +104,14 @@ public class PedestalController : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
+            if (book.activeInHierarchy)
+            {
+                float[] values = new float[2];
+                values[0] = 0.85f;
+                values[1] = 0.85f;
+                illuminationBorder.SetFloatArray("_Thickness", values);
+            }
+
             illuminated.SetFloat("_width", 1f);
             inTrigger = false;
         }
@@ -95,7 +122,7 @@ public class PedestalController : MonoBehaviour
         firstPersonController.GetComponent<FirstPersonController>().enabled = false;
     }
 
-    void ReturnControll()
+    void ReturnControl()
     {
         firstPersonController.GetComponent<FirstPersonController>().enabled = true;
     }
