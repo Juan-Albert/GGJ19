@@ -12,6 +12,8 @@ public class CameraController : MonoBehaviour {
 
     public bool movement;
 
+    public Material border;
+
     void Update()
     {
         if (movement)
@@ -36,6 +38,8 @@ public class CameraController : MonoBehaviour {
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.5f, layerMask))
         {
+
+            hit.collider.GetComponent<Renderer>().material = border;
 
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log("Did Hit");
