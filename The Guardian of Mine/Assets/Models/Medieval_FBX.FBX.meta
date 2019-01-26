@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 2f8370a9322393446807bf01fd508fef
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bandera1
+    100002: Bandera2
+    100004: Castillo
+    100006: Chimenea
+    100008: Gengon011
+    100010: Mastil1
+    100012: Mastil2
+    100014: //RootNode
+    100016: Mesa
+    100018: Piedra1
+    100020: Piedra2
+    100022: Piedra3
+    100024: Piedra4
+    100026: Plataforma
+    100028: Puente
+    100030: Puerta
+    100032: Silla1
+    100034: Silla2
+    100036: Torre
+    400000: Bandera1
+    400002: Bandera2
+    400004: Castillo
+    400006: Chimenea
+    400008: Gengon011
+    400010: Mastil1
+    400012: Mastil2
+    400014: //RootNode
+    400016: Mesa
+    400018: Piedra1
+    400020: Piedra2
+    400022: Piedra3
+    400024: Piedra4
+    400026: Plataforma
+    400028: Puente
+    400030: Puerta
+    400032: Silla1
+    400034: Silla2
+    400036: Torre
+    2100000: No Name
+    2300000: Bandera1
+    2300002: Bandera2
+    2300004: Castillo
+    2300006: Chimenea
+    2300008: Gengon011
+    2300010: Mastil1
+    2300012: Mastil2
+    2300014: Mesa
+    2300016: Piedra1
+    2300018: Piedra2
+    2300020: Piedra3
+    2300022: Piedra4
+    2300024: Plataforma
+    2300026: Puente
+    2300028: Puerta
+    2300030: Silla1
+    2300032: Silla2
+    2300034: Torre
+    3300000: Bandera1
+    3300002: Bandera2
+    3300004: Castillo
+    3300006: Chimenea
+    3300008: Gengon011
+    3300010: Mastil1
+    3300012: Mastil2
+    3300014: Mesa
+    3300016: Piedra1
+    3300018: Piedra2
+    3300020: Piedra3
+    3300022: Piedra4
+    3300024: Plataforma
+    3300026: Puente
+    3300028: Puerta
+    3300030: Silla1
+    3300032: Silla2
+    3300034: Torre
+    4300000: Plataforma
+    4300002: Piedra1
+    4300004: Piedra2
+    4300006: Piedra3
+    4300008: Piedra4
+    4300010: Silla2
+    4300012: Mesa
+    4300014: Castillo
+    4300016: Mastil1
+    4300018: Bandera1
+    4300020: Mastil2
+    4300022: Bandera2
+    4300024: Puerta
+    4300026: Torre
+    4300028: Silla1
+    4300030: Gengon011
+    4300032: Chimenea
+    4300034: Puente
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

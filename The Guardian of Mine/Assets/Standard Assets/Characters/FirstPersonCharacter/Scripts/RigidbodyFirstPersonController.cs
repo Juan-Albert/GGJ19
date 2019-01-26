@@ -81,7 +81,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public MovementSettings movementSettings = new MovementSettings();
         public MouseLook mouseLook = new MouseLook();
         public AdvancedSettings advancedSettings = new AdvancedSettings();
-
+        public Transform reSpawn;
 
         private Rigidbody m_RigidBody;
         private CapsuleCollider m_Capsule;
@@ -259,6 +259,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_IsGrounded && m_Jumping)
             {
                 m_Jumping = false;
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+
+            if (collision.gameObject.layer == 10)
+            {
+                this.gameObject.transform.position = reSpawn.position;
+
             }
         }
     }
