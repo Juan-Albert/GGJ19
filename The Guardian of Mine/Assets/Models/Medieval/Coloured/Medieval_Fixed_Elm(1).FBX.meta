@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb375f07d53f906498a710a17f52cb81
+guid: 833b816b539137d43885a7e0ec31aa78
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -7,120 +7,77 @@ ModelImporter:
     100002: Bandera2
     100004: Castillo
     100006: Castillo_Torre
-    100008: Chimenea
-    100010: Gato_Cabeza
-    100012: Gato_Collar
-    100014: Gato_Cuerpo
-    100016: Mastil1
-    100018: Mastil2
-    100020: //RootNode
-    100022: Mesa
-    100024: Palanca_Accionador
-    100026: Palanca_Base
-    100028: Piedra1
-    100030: Piedra2
-    100032: Piedra3
-    100034: Piedra4
-    100036: Plataforma
-    100038: Puente
-    100040: Puerta
-    100042: Puerta_marco
-    100044: Puerta_Pomo
-    100046: Rascador
-    100048: Silla1
-    100050: Silla2
-    100052: Torre
-    100054: Torre_Cupula
+    100008: Mastil1
+    100010: Mastil2
+    100012: //RootNode
+    100014: Mesa
+    100016: Piedra1
+    100018: Piedra2
+    100020: Piedra3
+    100022: Piedra4
+    100024: Plataforma
+    100026: Puerta_marco
+    100028: Silla1
+    100030: Silla2
+    100032: Torre
+    100034: Torre_Cupula
     400000: Bandera1
     400002: Bandera2
     400004: Castillo
     400006: Castillo_Torre
-    400008: Chimenea
-    400010: Gato_Cabeza
-    400012: Gato_Collar
-    400014: Gato_Cuerpo
-    400016: Mastil1
-    400018: Mastil2
-    400020: //RootNode
-    400022: Mesa
-    400024: Palanca_Accionador
-    400026: Palanca_Base
-    400028: Piedra1
-    400030: Piedra2
-    400032: Piedra3
-    400034: Piedra4
-    400036: Plataforma
-    400038: Puente
-    400040: Puerta
-    400042: Puerta_marco
-    400044: Puerta_Pomo
-    400046: Rascador
-    400048: Silla1
-    400050: Silla2
-    400052: Torre
-    400054: Torre_Cupula
+    400008: Mastil1
+    400010: Mastil2
+    400012: //RootNode
+    400014: Mesa
+    400016: Piedra1
+    400018: Piedra2
+    400020: Piedra3
+    400022: Piedra4
+    400024: Plataforma
+    400026: Puerta_marco
+    400028: Silla1
+    400030: Silla2
+    400032: Torre
+    400034: Torre_Cupula
     2100000: M_Castillo
     2100002: M_Ladrillos
     2100004: M_Madera
     2100006: M_Bandera_Mastil
     2100008: M_Torre
-    2100010: M_Rascador
-    2100012: M_Gato
-    2100014: M_Collar
     2300000: Bandera1
     2300002: Bandera2
     2300004: Castillo
     2300006: Castillo_Torre
-    2300008: Chimenea
-    2300010: Gato_Cabeza
-    2300012: Gato_Collar
-    2300014: Gato_Cuerpo
-    2300016: Mastil1
-    2300018: Mastil2
-    2300020: Mesa
-    2300022: Palanca_Accionador
-    2300024: Palanca_Base
-    2300026: Piedra1
-    2300028: Piedra2
-    2300030: Piedra3
-    2300032: Piedra4
-    2300034: Plataforma
-    2300036: Puente
-    2300038: Puerta
-    2300040: Puerta_marco
-    2300042: Puerta_Pomo
-    2300044: Rascador
-    2300046: Silla1
-    2300048: Silla2
-    2300050: Torre
-    2300052: Torre_Cupula
+    2300008: Mastil1
+    2300010: Mastil2
+    2300012: Mesa
+    2300014: Piedra1
+    2300016: Piedra2
+    2300018: Piedra3
+    2300020: Piedra4
+    2300022: Plataforma
+    2300024: Puerta_marco
+    2300026: Silla1
+    2300028: Silla2
+    2300030: Torre
+    2300032: Torre_Cupula
     3300000: Bandera1
     3300002: Bandera2
     3300004: Castillo
     3300006: Castillo_Torre
-    3300008: Chimenea
-    3300010: Gato_Cabeza
-    3300012: Gato_Collar
-    3300014: Gato_Cuerpo
-    3300016: Mastil1
-    3300018: Mastil2
-    3300020: Mesa
-    3300022: Palanca_Accionador
-    3300024: Palanca_Base
-    3300026: Piedra1
-    3300028: Piedra2
-    3300030: Piedra3
-    3300032: Piedra4
-    3300034: Plataforma
-    3300036: Puente
-    3300038: Puerta
-    3300040: Puerta_marco
-    3300042: Puerta_Pomo
-    3300044: Rascador
-    3300046: Silla1
-    3300048: Silla2
-    3300050: Torre
-    3300052: Torre_Cupula
+    3300008: Mastil1
+    3300010: Mastil2
+    3300012: Mesa
+    3300014: Piedra1
+    3300016: Piedra2
+    3300018: Piedra3
+    3300020: Piedra4
+    3300022: Plataforma
+    3300024: Puerta_marco
+    3300026: Silla1
+    3300028: Silla2
+    3300030: Torre
+    3300032: Torre_Cupula
     4300000: Plataforma
     4300002: Piedra1
     4300004: Piedra2
@@ -136,18 +93,8 @@ ModelImporter:
     4300024: Puerta_marco
     4300026: Torre
     4300028: Silla1
-    4300030: Rascador
-    4300032: Chimenea
-    4300034: Puente
-    4300036: Gato_Cuerpo
-    4300038: Palanca_Base
-    4300040: Palanca_Accionador
-    4300042: Gato_Cabeza
-    4300044: Gato_Collar
-    4300046: Puerta
-    4300048: Puerta_Pomo
-    4300050: Castillo_Torre
-    4300052: Torre_Cupula
+    4300030: Castillo_Torre
+    4300032: Torre_Cupula
   externalObjects: {}
   materials:
     importMaterials: 1
