@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    public float sensitivityY = 15F;
-    public float minimumY = -60F;
-    public float maximumY = 60F;
+    //public float sensitivityY = 15F;
+    //public float minimumY = -60F;
+    //public float maximumY = 60F;
 
-    float rotationY = 0F;
+    //float rotationY = 0F;
 
-    public bool movement;
-
-    public Material border;
+    //public bool movement;
 
     void Update()
     {
-        if (movement)
-        {
+        //if (movement)
+        //{
 
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+        //    rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+        //    rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-            transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
-        }
+        //    transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+        //}
 
 
 
@@ -39,7 +37,7 @@ public class CameraController : MonoBehaviour {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.5f, layerMask))
         {
 
-            hit.collider.GetComponent<Renderer>().material = border;
+            //hit.collider.GetComponent<Renderer>().material = border;
 
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log("Did Hit");

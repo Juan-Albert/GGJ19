@@ -7,7 +7,6 @@ public class CatController : MonoBehaviour
 
     public GameObject player;
 
-    public GameObject parent;
 
     
 
