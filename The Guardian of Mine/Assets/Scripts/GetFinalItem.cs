@@ -11,19 +11,26 @@ public class GetFinalItem : MonoBehaviour
 
     public Material mat;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(fIO && sIO)
+        if(fIO == true && sIO == true)
+        {
+            Debug.Log("A TOPE");
+            anim.SetBool("Activated", true);
             this.GetComponent<Renderer>().material = mat;
-
+            
+        }
+        else
         CheckStatus();
 
     }
