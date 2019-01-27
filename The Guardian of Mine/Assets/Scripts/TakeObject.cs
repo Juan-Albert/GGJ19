@@ -32,6 +32,7 @@ public class TakeObject : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             inTrigger = true;
+
         }
     }
 
