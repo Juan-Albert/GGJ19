@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 651006171}
   - component: {fileID: 651006170}
   - component: {fileID: 651006174}
+  - component: {fileID: 651006175}
   m_Layer: 0
   m_Name: Treasure Map
   m_TagString: Untagged
@@ -309,6 +310,21 @@ MonoBehaviour:
   itemObtained: 0
   mat1: {fileID: 0}
   mat2: {fileID: 0}
+--- !u!114 &651006175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651006169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2619153817993f746af14eef31cf7c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeColor: 0
+  highlightNow: 1
+  edgeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &721532294
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +516,10 @@ PrefabInstance:
     - target: {fileID: 100014, guid: bb1f2228ec359fe41af82a07e2e908af, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: bb1f2228ec359fe41af82a07e2e908af, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb1f2228ec359fe41af82a07e2e908af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -793,6 +813,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f2f1a1396ddbd2047bfa22626d15b28f, type: 2}
+    - target: {fileID: 2300060, guid: bb1f2228ec359fe41af82a07e2e908af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee8999d3f45729f489f0dc21506fd608, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb1f2228ec359fe41af82a07e2e908af, type: 3}
 --- !u!4 &1039413547 stripped
@@ -847,6 +871,21 @@ MonoBehaviour:
   itemObtained: 0
   mat1: {fileID: 0}
   mat2: {fileID: 0}
+--- !u!114 &1039413552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039413550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2619153817993f746af14eef31cf7c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeColor: 0
+  highlightNow: 1
+  edgeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1175666562
 GameObject:
   m_ObjectHideFlags: 0
