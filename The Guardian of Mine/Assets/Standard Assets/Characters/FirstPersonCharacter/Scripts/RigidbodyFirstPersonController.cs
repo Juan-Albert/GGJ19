@@ -89,6 +89,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
+        private bool canmove = true;
 
 
         public Vector3 Velocity
@@ -143,7 +144,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GroundCheck();
             Vector2 input = GetInput();
 
-            if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
+            if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded) && canmove)
             {
                 // always move along the camera forward as it is the direction that it being aimed at
                 Vector3 desiredMove = cam.transform.forward*input.y + cam.transform.right*input.x;
@@ -269,6 +270,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (collision.gameObject.layer == 10)
             {
+                canmove = false;
                 panel.SetTrigger("reset");
                 Invoke("SetPosition", 2f);
 
@@ -277,6 +279,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void SetPosition()
         {
+            canmove = true;
             this.gameObject.transform.position = reSpawn.position;
         }
     }
