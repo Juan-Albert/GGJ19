@@ -20,7 +20,11 @@ public class GetItem : MonoBehaviour
     {
 
         if (itemObtained)
+        {
             this.GetComponent<Renderer>().material = mat2;
+            this.gameObject.SetActive(false);   
+        }
+
         else
         {
             this.GetComponent<Renderer>().material = mat1;

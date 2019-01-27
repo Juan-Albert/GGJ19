@@ -7,7 +7,7 @@ public class GetFinalItem : MonoBehaviour
 
     public GameObject go1, go2;
 
-    public bool fIO, sIO;
+    public bool fIO, sIO, missionCompleted;
 
     public Material mat;
 
@@ -25,6 +25,7 @@ public class GetFinalItem : MonoBehaviour
 
         if(fIO == true && sIO == true)
         {
+            missionCompleted = true;
             Debug.Log("A TOPE");
             anim.SetBool("Activated", true);
             this.GetComponent<Renderer>().material = mat;
@@ -37,8 +38,12 @@ public class GetFinalItem : MonoBehaviour
 
     public void CheckStatus()
     {
-        fIO = go1.GetComponent<GetItem>().itemObtained;
-        sIO = go2.GetComponent<GetItem>().itemObtained;
+        if (!missionCompleted)
+        {
+            fIO = go1.GetComponent<GetItem>().itemObtained;
+            sIO = go2.GetComponent<GetItem>().itemObtained;
+        }
+
     }
 
 }
