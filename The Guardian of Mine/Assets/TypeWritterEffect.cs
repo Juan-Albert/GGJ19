@@ -18,7 +18,7 @@ public class TypeWritterEffect : MonoBehaviour
 
     public AudioSource aS1, aS2, aS3, aS4;
 
-    private LoadScene sceneLoader;
+    public LoadScene sceneLoader;
 
     // Use this for initialization
     void Start()
