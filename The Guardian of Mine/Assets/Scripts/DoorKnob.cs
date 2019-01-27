@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorKnob : MonoBehaviour
 {
     public GameObject door;
+    public bool levelEnded = false;
 
     public void Activate()
     {
