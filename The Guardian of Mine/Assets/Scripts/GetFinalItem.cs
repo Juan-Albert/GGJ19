@@ -9,7 +9,6 @@ public class GetFinalItem : MonoBehaviour
 
     public bool fIO, sIO, missionCompleted;
 
-    public Material mat;
 
     private Animator anim;
 
@@ -26,9 +25,7 @@ public class GetFinalItem : MonoBehaviour
         if(fIO == true && sIO == true)
         {
             missionCompleted = true;
-            Debug.Log("A TOPE");
             anim.SetBool("Activated", true);
-            this.GetComponent<Renderer>().material = mat;
             
         }
         else
