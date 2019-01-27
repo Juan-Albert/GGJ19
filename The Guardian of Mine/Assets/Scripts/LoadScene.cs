@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+
+    public Animator panel;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hola");
         if(other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            panel.SetTrigger("end");
+            Invoke("NextScene", 2f);
         }
         
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

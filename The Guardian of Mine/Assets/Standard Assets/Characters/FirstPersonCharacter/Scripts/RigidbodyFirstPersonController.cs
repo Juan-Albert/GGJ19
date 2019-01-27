@@ -82,6 +82,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public MouseLook mouseLook = new MouseLook();
         public AdvancedSettings advancedSettings = new AdvancedSettings();
         public Transform reSpawn;
+        public Animator panel;
 
         private Rigidbody m_RigidBody;
         private CapsuleCollider m_Capsule;
@@ -264,12 +265,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnCollisionEnter(Collision collision)
         {
+            Debug.Log(collision.gameObject.layer);
 
             if (collision.gameObject.layer == 10)
             {
-                this.gameObject.transform.position = reSpawn.position;
+                panel.SetTrigger("reset");
+                Invoke("SetPosition", 2f);
 
             }
+        }
+
+        private void SetPosition()
+        {
+            this.gameObject.transform.position = reSpawn.position;
         }
     }
 }
