@@ -90,7 +90,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000000, guid: f21594d5e5ddd874eb3bf3ced9119f4f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1608,6 +1608,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300006, guid: fe53c997e33f4c34dbe0c0ae9c5fc4cf, type: 3}
+--- !u!1 &1652774781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 367173193887786079, guid: d2303d090b688724c82d462d9c28c367,
+    type: 3}
+  m_PrefabInstance: {fileID: 367173194294750075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!45 &1652774783
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652774781}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
 --- !u!1 &1701115491
 GameObject:
   m_ObjectHideFlags: 0
