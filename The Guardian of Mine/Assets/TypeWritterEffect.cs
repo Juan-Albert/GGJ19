@@ -18,7 +18,7 @@ public class TypeWritterEffect : MonoBehaviour
 
     public AudioSource aS1, aS2, aS3, aS4;
 
-    LoadScene sceneLoader;
+    private LoadScene sceneLoader;
 
     // Use this for initialization
     void Start()
@@ -76,7 +76,7 @@ public class TypeWritterEffect : MonoBehaviour
         }
 
         yield return new WaitForSeconds(3f);
-        //sceneLoader.NextScene();
+        sceneLoader.NextScene();
 
     }
     

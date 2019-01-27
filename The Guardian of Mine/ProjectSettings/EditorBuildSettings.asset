@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/New Game.unity
+    guid: db5c0cebe98b2cf43bfd07deb39754be
+  - enabled: 1
     path: Assets/Scenes/Medieval.unity
     guid: 1962c063deb4e7843b882efe5f5fb4a2
   - enabled: 1
