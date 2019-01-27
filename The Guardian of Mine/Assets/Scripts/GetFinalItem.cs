@@ -6,6 +6,7 @@ public class GetFinalItem : MonoBehaviour
 {
 
     public GameObject go1, go2;
+    public GameObject door;
 
     public bool fIO, sIO, missionCompleted;
 
@@ -26,7 +27,9 @@ public class GetFinalItem : MonoBehaviour
         {
             missionCompleted = true;
             anim.SetBool("Activated", true);
-            
+            door.GetComponent<DoorKnob>().levelEnded = true;
+
+
         }
         else
         CheckStatus();
