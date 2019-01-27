@@ -17,18 +17,20 @@ public class CameraController : MonoBehaviour {
     void Update()
     {
         detectThings();
+        
     }
 
     private void detectThings()
     {
-
+        layerMask = ~layerMask;
+        Debug.Log("Holi");
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.5f, layerMask))
         {
             Debug.Log("Hit");
             //hit.collider.GetComponent<BorderController>().changeColor = true;
             lastGameObject = hit.collider.gameObject;
             detectLastObject = true;
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 Debug.Log("click");
             }

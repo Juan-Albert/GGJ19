@@ -10,15 +10,12 @@ public class BorderController : MonoBehaviour
     [ColorUsageAttribute(true, true)]
     public Color edgeColor;
 
-    private void Start()
-    {
-    }
 
     void Update()
     {
         if (changeColor && highlightNow)
         {
-            GetComponent<Renderer>().material.SetColor("_ColorSuperficial", edgeColor);
+            GetComponent<Renderer>().material.SetFloat("_width", 0.1f);
 
             for (int i = 0; i < transform.childCount; i++)
             {
@@ -27,7 +24,7 @@ public class BorderController : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.SetColor("_ColorSuperficial", Color.black);
+            GetComponent<Renderer>().material.SetFloat("_width", 1f);
 
             for (int i = 0; i < transform.childCount; i++)
             {
