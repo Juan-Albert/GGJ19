@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IluminateItem
-  m_Shader: {fileID: 4800000, guid: 4bb7dfc4de759a04c9f8df6938736aa5, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_Name: NormalIllumination
+  m_Shader: {fileID: 4800000, guid: 5cc81d40a71915640be06a5da3c1ef50, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,9 +19,9 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Floats: []
+    m_Floats:
+    - _alpha: 0.3
     m_Colors:
-    - Vector2_BA54AF5F: {r: 0.85, g: 0.85, b: 0, a: 0}
-    - _ColorSuperficial: {r: 0.8679245, g: 0.09416164, b: 0.09416164, a: 1}
-    - _ColorTodo: {r: 0, g: 0, b: 0, a: 1}
-    - _Thickness: {r: 0.85, g: 0.85, b: 0, a: 0}
+    - Color_9B67EECB: {r: 0, g: 0.5270829, b: 0.6132076, a: 1}
+    - Color_A7DB05D0: {r: 0, g: 0, b: 0, a: 0}
+    - _Illumination: {r: 0.5, g: 0.5, b: 0.5, a: 1}
