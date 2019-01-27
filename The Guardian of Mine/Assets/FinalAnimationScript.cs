@@ -9,12 +9,20 @@ public class FinalAnimationScript : MonoBehaviour
     public GameObject canvas;
     private AudioSource audioSource;
 
+    public AudioClip goodNight;
+    public AudioClip song;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         Invoke("Sleep", time);
+    }
+
+    void Say()
+    {
+        audioSource.PlayOneShot(goodNight);
     }
 
     void Sleep()
@@ -26,8 +34,9 @@ public class FinalAnimationScript : MonoBehaviour
     {
         //Poner Aqui el final y activar los creditos
         canvas.SetActive(true);
-        audioSource.PlayOneShot(audioSource.clip);
+        //audioSource.PlayOneShot(audioSource.clip);
         anim.Play("Empty");
         
+        audioSource.PlayOneShot(song);
     }
 }

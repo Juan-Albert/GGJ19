@@ -55,4 +55,9 @@ public class TakeObject : MonoBehaviour
         sphereMesh.transform.position = originalMesh.transform.position;
         sphereMesh.SetActive(true);
     }
+
+    public void Take()
+    {
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
+    }
 }

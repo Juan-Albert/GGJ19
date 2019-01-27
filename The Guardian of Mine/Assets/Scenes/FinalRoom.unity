@@ -304,6 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 3
   canvas: {fileID: 1655769367}
+  goodNight: {fileID: 8300000, guid: 2a0ffdfa2aff6844c8c8f3cacccef236, type: 3}
+  song: {fileID: 8300000, guid: f3b990eace688e946ba616cb19f9ddce, type: 3}
 --- !u!82 &111201888
 AudioSource:
   m_ObjectHideFlags: 0
