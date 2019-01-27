@@ -22,14 +22,22 @@ public class CameraController : MonoBehaviour {
 
     private void detectThings()
     {
-        Debug.Log("Holi");
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, layerMask))
         {
 
             Debug.Log("Hit");
 
-            if(!hit.collider.gameObject.CompareTag("knob"))
+            if(hit.collider.gameObject.CompareTag("knob"))
+            {
+                if (hit.collider.gameObject.GetComponent<DoorKnob>().levelEnded)
+                {
+                    hit.collider.GetComponent<BorderController>().changeColor = true;
+                }
+            }
+            else
+            {
                 hit.collider.GetComponent<BorderController>().changeColor = true;
+            }
 
             lastGameObject = hit.collider.gameObject;
             detectLastObject = true;
@@ -48,7 +56,6 @@ public class CameraController : MonoBehaviour {
                     Debug.Log("knob");
                     if(hit.collider.gameObject.GetComponent<DoorKnob>().levelEnded)
                     {
-                        hit.collider.GetComponent<BorderController>().changeColor = true;
                         hit.collider.gameObject.GetComponent<DoorKnob>().Activate();
                     }
                 }
