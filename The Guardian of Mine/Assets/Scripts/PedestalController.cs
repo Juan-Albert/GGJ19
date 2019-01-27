@@ -10,6 +10,7 @@ public class PedestalController : MonoBehaviour
     public GameObject[] obj;
     public GameObject[] sphereObj;
     public GameObject book;
+    public GameObject estela;
 
     public GameObject firstPersonController;
 
@@ -96,7 +97,8 @@ public class PedestalController : MonoBehaviour
                 {
                     book.SetActive(false);
                     bookTaked = true;
-                    DissolveObj();
+                    estela.SetActive(true);
+                    //DissolveObj();
                 }
                 else if (inTrigger && Input.GetMouseButtonDown(1) && !dissolve_obj && !bookTaked)
                 {
