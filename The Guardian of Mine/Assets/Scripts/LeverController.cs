@@ -6,18 +6,8 @@ public class LeverController : MonoBehaviour
 {
     public GameObject bridge;
 
-    void OnTriggerEnter(Collider other)
+    public void Activate()
     {
-        Debug.Log("Holi");
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Holi");
-            if (Input.GetMouseButtonDown(1))
-            {
-                bridge.GetComponent<Animator>().SetBool("Active", true);
-            }
-                
-        }
+        bridge.GetComponent<Animator>().SetBool("Active", true);
     }
 }

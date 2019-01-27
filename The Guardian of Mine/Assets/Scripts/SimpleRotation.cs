@@ -10,7 +10,7 @@ public class SimpleRotation : MonoBehaviour
 
     private void Start()
     {
-        m_EulerAngleVelocity = new Vector3(0, 0, 50);
+        m_EulerAngleVelocity = new Vector3(0, 50, 0);
         myRB = this.gameObject.GetComponent<Rigidbody>();
     }
 
