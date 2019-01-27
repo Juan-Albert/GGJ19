@@ -39,6 +39,11 @@ public class CameraController : MonoBehaviour {
                     hit.collider.gameObject.GetComponent<Animator>().SetBool("Activate", true);
                     hit.collider.gameObject.GetComponent<LeverController>().Activate();
                 }
+                else if (hit.collider.gameObject.CompareTag("knob"))
+                {
+                    Debug.Log("knob");
+                    hit.collider.gameObject.GetComponent<DoorKnob>().Activate();
+                }
             }
 
         }

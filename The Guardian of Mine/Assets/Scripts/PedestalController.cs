@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PedestalController : MonoBehaviour
 {
-    public PlanetControlller planetControlller;
+    public PlanetControlller planetController;
 
     public GameObject[] obj;
     public GameObject[] sphereObj;
@@ -51,73 +51,77 @@ public class PedestalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dissolve_obj)
+        if (planetController.objectsIn)
         {
-            not_dis -= Time.deltaTime / time_ratio;
-            if (not_dis <= dis)
-            {
-                not_dis = -0.5f;
-                sphereObj[0].SetActive(false);
-                sphereObj[1].SetActive(false);
-                sphereObj[2].SetActive(false);
-                book.SetActive(true);
-                GetBook();
-                dissolve_obj = false;
-            }
-                
-            dissolution.SetFloat("_dissolve", not_dis);
-        }
-        else if (giveMeBook)
-        {
-            Destroy(sphereObj[0]);
-            Destroy(sphereObj[1]);
-            Destroy(sphereObj[2]);
 
-            dis += Time.deltaTime / time_ratio;
-            if (dis >= 0.5f)
+            if (dissolve_obj)
             {
-                dis = 0.5f;
-                giveMeBook = false;
-                
-                illuminationBorder.SetVector("_Thickness", new Vector4(0.85f,0.85f));
-                book.GetComponent<MeshRenderer>().material = illuminationBorder;
-                book.transform.Find("Cohete").gameObject.SetActive(true);
-                ReturnControl();
-            }
+                not_dis -= Time.deltaTime / time_ratio;
+                if (not_dis <= dis)
+                {
+                    not_dis = -0.5f;
+                    sphereObj[0].SetActive(false);
+                    sphereObj[1].SetActive(false);
+                    sphereObj[2].SetActive(false);
+                    book.SetActive(true);
+                    GetBook();
+                    dissolve_obj = false;
+                }
 
-            dissolution.SetFloat("_dissolve", dis);
-        }
-        else
-        {
-            if (inTrigger && Input.GetMouseButtonDown(1) && book.activeInHierarchy && !bookTaked)
-            {
-                book.SetActive(false);
-                bookTaked = true;
-                DissolveObj();
+                dissolution.SetFloat("_dissolve", not_dis);
             }
-            else if (inTrigger && Input.GetMouseButtonDown(1) && !dissolve_obj && !bookTaked)
+            else if (giveMeBook)
             {
-                ChangeMaterial();
-                dissolve_obj = true;
-                DissolveObj();
+                Destroy(sphereObj[0]);
+                Destroy(sphereObj[1]);
+                Destroy(sphereObj[2]);
+
+                dis += Time.deltaTime / time_ratio;
+                if (dis >= 0.5f)
+                {
+                    dis = 0.5f;
+                    giveMeBook = false;
+
+                    illuminationBorder.SetVector("_Thickness", new Vector4(0.85f, 0.85f));
+                    book.GetComponent<MeshRenderer>().material = illuminationBorder;
+                    book.transform.Find("Cohete").gameObject.SetActive(true);
+                    ReturnControl();
+                }
+
+                dissolution.SetFloat("_dissolve", dis);
             }
-            
+            else
+            {
+                if (inTrigger && Input.GetMouseButtonDown(1) && book.activeInHierarchy && !bookTaked)
+                {
+                    book.SetActive(false);
+                    bookTaked = true;
+                    DissolveObj();
+                }
+                else if (inTrigger && Input.GetMouseButtonDown(1) && !dissolve_obj && !bookTaked)
+                {
+                    ChangeMaterial();
+                    dissolve_obj = true;
+                    DissolveObj();
+                }
+
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (planetControlller.obj0 && !book.activeInHierarchy)
+        if (planetController.obj0 && !book.activeInHierarchy)
         {
             obj[0].SetActive(false);
             sphereObj[0].SetActive(true);
         }
-        if (planetControlller.obj1 && !book.activeInHierarchy)
+        if (planetController.obj1 && !book.activeInHierarchy)
         {
             obj[1].SetActive(false);
             sphereObj[1].SetActive(true);
         }
-        if (planetControlller.obj2 && !book.activeInHierarchy)
+        if (planetController.obj2 && !book.activeInHierarchy)
         {
             obj[2].SetActive(false);
             sphereObj[2].SetActive(true);
@@ -128,13 +132,13 @@ public class PedestalController : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            print(other.gameObject.name);
+            
             if (book.activeInHierarchy)
             {
                 illuminationBorder.SetVector("_Thickness", new Vector4(0.85f, 0.85f));
             }
 
-            if (planetControlller.objectsIn)
+            if (planetController.objectsIn)
             {
                 starIllumination.SetFloat("_width", 0.1f);
                 houseIllumination.SetFloat("_width", 0.1f);
@@ -160,7 +164,7 @@ public class PedestalController : MonoBehaviour
                 illuminationBorder.SetVector("_Thickness", new Vector4(1f, 1f));
             }
 
-            if (planetControlller.objectsIn)
+            if (planetController.objectsIn)
             {
                 starIllumination.SetFloat("_width", 1f);
                 houseIllumination.SetFloat("_width", 1f);
