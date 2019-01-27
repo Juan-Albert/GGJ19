@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Medieval.unity
     guid: 1962c063deb4e7843b882efe5f5fb4a2
+  - enabled: 1
+    path: Assets/Scenes/DefinitivePirate1.unity
+    guid: da3d9ad637c7eba4b8076d8fc8facf58
+  - enabled: 1
+    path: Assets/Scenes/Space.unity
+    guid: f21047d910296be4f9f31dba70b6ea48
   m_configObjects: {}

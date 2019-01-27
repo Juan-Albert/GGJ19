@@ -9,6 +9,8 @@ public class LeverController : MonoBehaviour
 
     public GameObject bridge;
 
+    public DoorKnob doorKnob;
+
     private void Start()
     {
         aS = GetComponent<AudioSource>();
@@ -16,6 +18,7 @@ public class LeverController : MonoBehaviour
 
     public void Activate()
     {
+        doorKnob.levelEnded = true;
         bridge.GetComponent<Animator>().SetBool("Active", true);
         aS.Play();
     }

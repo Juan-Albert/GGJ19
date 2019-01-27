@@ -18,7 +18,9 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Ground")]
     public Transform groundCheck;
     public Transform reSpawn;
+    public Animator panel;
     public LayerMask whatIsGround;
+    
 
     private bool _grounded;
     private bool _jumpKeyPressed;
@@ -87,9 +89,14 @@ public class PlayerMovement : MonoBehaviour {
 
         if (collision.gameObject.layer == 10)
         {
-            Debug.Log("Holi");
-            this.gameObject.transform.position = reSpawn.position;
+            panel.SetTrigger("reset");
+            Invoke("SetPosition", 2f);
 
         }
+    }
+
+    private void SetPosition()
+    {
+        this.gameObject.transform.position = reSpawn.position;
     }
 }
