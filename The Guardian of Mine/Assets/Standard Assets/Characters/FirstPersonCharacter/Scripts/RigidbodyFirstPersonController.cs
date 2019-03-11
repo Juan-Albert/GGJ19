@@ -136,6 +136,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
+            GroundCheck();
+            Vector2 input = GetInput();
+
+            if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded) && canmove)
+            {
+                
+                this.transform.Translate(Vector3.right * movementSettings.CurrentTargetSpeed * input.x * Time.deltaTime);
+                this.transform.Translate(Vector3.forward * movementSettings.CurrentTargetSpeed * input.y * Time.deltaTime);
+
+            }
         }
 
 
@@ -143,22 +154,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             GroundCheck();
             Vector2 input = GetInput();
-
-            if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded) && canmove)
-            {
-                // always move along the camera forward as it is the direction that it being aimed at
-                Vector3 desiredMove = cam.transform.forward*input.y + cam.transform.right*input.x;
-                desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
-
-                desiredMove.x = desiredMove.x*movementSettings.CurrentTargetSpeed;
-                desiredMove.z = desiredMove.z*movementSettings.CurrentTargetSpeed;
-                desiredMove.y = desiredMove.y*movementSettings.CurrentTargetSpeed;
-                if (m_RigidBody.velocity.sqrMagnitude <
-                    (movementSettings.CurrentTargetSpeed*movementSettings.CurrentTargetSpeed))
-                {
-                    m_RigidBody.AddForce(desiredMove*SlopeMultiplier(), ForceMode.Impulse);
-                }
-            }
 
             if (m_IsGrounded)
             {
@@ -266,7 +261,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log(collision.gameObject.layer);
 
             if (collision.gameObject.layer == 10)
             {
@@ -274,6 +268,33 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 panel.SetTrigger("reset");
                 Invoke("SetPosition", 2f);
 
+            }
+
+            if(collision.gameObject.CompareTag("Rascador"))
+            {
+                Transform myTF = this.transform;
+                this.transform.SetParent(collision.transform );
+                this.transform.position = myTF.position;
+                this.transform.rotation = myTF.rotation;
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Rascador"))
+            {
+                Transform myTF = this.transform;
+                this.transform.parent = other.transform;
+                this.transform.position = myTF.position;
+                this.transform.rotation = myTF.rotation;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag("Rascador"))
+            {
+                this.transform.parent = null;
             }
         }
 
