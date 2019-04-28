@@ -1,14 +1,23 @@
 fileFormatVersion: 2
-guid: 366764af987a40240b9e94a33ec7d813
+guid: 3d64775a66bfd9b4d9767ab64bd5a9cd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Mesa
+    100002: //RootNode
+    100004: Torus002
+    400000: Mesa
+    400002: //RootNode
+    400004: Torus002
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: Mesa
+    2300002: Torus002
+    3300000: Mesa
+    3300002: Torus002
     4300000: Mesa
+    4300002: Torus002
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -61,8 +70,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -89,7 +98,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
