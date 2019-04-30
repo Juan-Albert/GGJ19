@@ -36,7 +36,15 @@ public class CameraController : MonoBehaviour {
             }
             else
             {
-                hit.collider.GetComponent<BorderController>().changeColor = true;
+                if (hit.collider.GetComponent<BorderController>() != null)
+                {
+                    hit.collider.GetComponent<BorderController>().changeColor = true;
+                }
+                else if (hit.collider.GetComponent<ChildReference>() != null)
+                {
+                    hit.collider.GetComponent<ChildReference>().bc.changeColor = true;
+                }
+                
             }
 
             lastGameObject = hit.collider.gameObject;
@@ -62,8 +70,11 @@ public class CameraController : MonoBehaviour {
                 else if (hit.collider.gameObject.CompareTag("itemPirates"))
                 {
                     Debug.Log("item pirates");
-                    hit.collider.gameObject.GetComponent<GetItem>().itemObtained = true;
+                    if (hit.collider.gameObject.GetComponent<GetItem>() != null)
+                        hit.collider.gameObject.GetComponent<GetItem>().itemObtained = true;
+                    
                 }
+                
 
             }
 
@@ -72,7 +83,8 @@ public class CameraController : MonoBehaviour {
         {
             Debug.Log("No Hit");
             detectLastObject = false;
-            if (lastGameObject != null) lastGameObject.GetComponent<BorderController>().changeColor = false;
+            if (lastGameObject != null) lastGameObject.GetComponentInChildren<BorderController>().changeColor = false;
+            
         }
     }
 

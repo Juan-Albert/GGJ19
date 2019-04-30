@@ -12,7 +12,12 @@ public class GetItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (itemObtained)
+        if (itemObtained && gameObject.name == "Chest" || gameObject.name == "Chest_CubiertaSuperior")
+        {
+            GetComponent<GetFinalItem>().openChest = true;
+            return;
+        }
+        else if (itemObtained)
             this.gameObject.SetActive(false);
 
     }
